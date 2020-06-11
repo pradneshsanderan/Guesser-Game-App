@@ -34,8 +34,8 @@ const StartGameScreen = props => {
             (
                 <Card style={styles.summary}>
                     <Text>You Selected</Text>
-            <NumberContainer>{selectedNumber}</NumberContainer>
-            <Button title="Start Game"/>
+                    <NumberContainer>{selectedNumber}</NumberContainer>
+                    <Button title="Start Game" onPress={() => props.onStartGame(selectedNumber)} />
                 </Card>);
     }
 
@@ -101,9 +101,9 @@ const styles = StyleSheet.create({
         width: 50,
         textAlign: 'center'
     },
-    summary:{
-        marginTop:20,
-        alignItems:'center',
+    summary: {
+        marginTop: 20,
+        alignItems: 'center',
 
     }
 });
